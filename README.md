@@ -16,6 +16,7 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
 
 1. **Install Nginx:**
    - On Ubuntu or Debian-based systems, run:
+     
      ```bash
      sudo apt update
      sudo apt install nginx
@@ -23,6 +24,7 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
 
 2. **Create Project Directory:**
    - Create a directory for your project and add an `index.html` file:
+     
      ```bash
      mkdir static-website
      cd static-website
@@ -31,10 +33,13 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
 
 3. **Configure Nginx:**
    - Create an Nginx server block configuration for your static website. Replace `your_domain_or_ip` with your actual domain or IP address:
+     
      ```bash
      sudo nano /etc/nginx/sites-available/static-website
      ```
+   
    - Add the following configuration:
+     
      ```nginx
      server {
          listen 80;
@@ -48,23 +53,28 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
          }
      }
      ```
+     
      Replace `/path/to/your/static-website` with the actual path to your `static-website` directory.
 
 4. **Create a Symbolic Link:**
    - Create a symbolic link to enable the site:
+     
      ```bash
      sudo ln -s /etc/nginx/sites-available/static-website /etc/nginx/sites-enabled/
      ```
 
 5. **Test Nginx Configuration:**
    - Before restarting Nginx, test the configuration:
+     
      ```bash
      sudo nginx -t
      ```
+     
      If successful, you should see a message indicating that the configuration test is successful.
 
 6. **Restart Nginx:**
    - Restart Nginx to apply the changes:
+     
      ```bash
      sudo service nginx restart
      ```
