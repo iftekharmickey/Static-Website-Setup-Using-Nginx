@@ -32,7 +32,7 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
      ```
 
 3. **Configure Nginx:**
-   - Create an Nginx server block configuration for your static website. Replace `your_domain_or_ip` with your actual domain or IP address:
+   - Create an Nginx server block configuration for your static website:
      
      ```bash
      sudo nano /etc/nginx/sites-available/static-website
@@ -54,7 +54,7 @@ This simple project consists of an `index.html` file that displays a "Hello, Ngi
      }
      ```
      
-     Replace `/path/to/your/static-website` with the actual path to your `static-website` directory.
+     Replace `your_domain_or_ip` with your actual domain or IP address and `/path/to/your/static-website` with the actual path to your `static-website` directory.
 
 4. **Create a Symbolic Link:**
    - Create a symbolic link to enable the site:
